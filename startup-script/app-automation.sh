@@ -33,7 +33,7 @@ sudo rm -f latest.tar.gz
 
 # Configure Apache
 sudo rm -rf /etc/apache2/sites-enabled/000-default.conf
-sudo wget https://raw.githubusercontent.com/awanmbandi/google-cloud-projects/main/apache-config/000-default.conf -P /etc/apache2/sites-enabled/
+sudo aws s3 cp s3://three-tier-web-app-configurations-654654537981/apache-config/000-default.conf /etc/apache2/sites-enabled/
 
 # Restart the Apache2 Service
 sudo service apache2 restart
@@ -41,7 +41,7 @@ sudo service apache2 restart
 # Create a wp-config.php file on the document root from the sample configuration file
 # Also Update the database details in the wp-config.php file
 sudo rm -rf /var/www/wordpress/wp-config-sample.php
-sudo wget https://raw.githubusercontent.com/awanmbandi/google-cloud-projects/main/database-config/wp-config.php -P /var/www/wordpress/
+sudo aws s3 cp s3://three-tier-web-app-configurations-654654537981/database-config/wp-config.php /var/www/wordpress/
 
 # Set appropriate apache permission to the files and directories
 sudo chown -R www-data:www-data /var/www/wordpress
