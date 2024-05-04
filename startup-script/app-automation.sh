@@ -26,6 +26,9 @@ sudo service apache2 enable
 sudo apt-get -y install mysql-client
 mysql --version
 
+# Install AWS CLI
+sudo apt-get install awscli -y
+
 # Download the latest source code for the WordPress Application
 curl -O https://wordpress.org/latest.tar.gz
 sudo tar xzf latest.tar.gz -C /var/www
