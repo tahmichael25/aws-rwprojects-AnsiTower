@@ -175,18 +175,6 @@ Once you setup your Ansible Tower environment. Follow below instructions to crea
     - Click on `SAVE`
 ![ConfigureDBJobTemplate](https://github.com/awanmbandi/aws-real-world-projects/blob/project-resources-docs/images/Screen%20Shot%202023-11-14%20at%208.57.34%20PM.png)
 
-### D.6) Fetch Database Enpoint | Update DB/App Config
-- Click on the plus to create a `Job Template`
-    - Name: `fetch-database-dns-endpoint-job-template`
-    - Inventory: `Appserver-Host`
-    - Job Type: Select `RUN`
-    - Project: Select `tower-automation-workflow-project`
-    - Playbook: Select the `fetch_rds_db_endpoint.yaml`
-    - Credentials: Select your Machine Credential `appserver-machine-credential`
-    - Verbosity: Select...
-    - Click on `SAVE`
-![ConfigureDBJobTemplate](https://github.com/awanmbandi/aws-real-world-projects/blob/project-resources-docs/images/hjgkfhdsgs.png)
-
 ### Confirm You Have The Following Job Templates Created
 ![AllJobTemplate](https://github.com/awanmbandi/aws-real-world-projects/blob/project-resources-docs/images/templatejobs.png)
 
